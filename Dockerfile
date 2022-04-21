@@ -5,7 +5,7 @@ WORKDIR /usr/app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm install && touch myfile && echo "hello" >> myfile
 COPY . .
 
 EXPOSE 80
